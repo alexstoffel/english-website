@@ -4,56 +4,166 @@
   <meta charset="UTF-8">
   <title>Flood Myths Project</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      margin: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header, footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      background: #34495e;
+    }
+    nav li {
+      margin: 0 1em;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5em;
+      display: inline-block;
+    }
+    nav a:hover {
+      background: #2c3e50;
+    }
+    .tab-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+    .tab-buttons button {
+      margin: 5px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #3498db;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .tab-buttons button.active {
+      background-color: #2980b9;
+    }
+    .tab-content {
+      display: none;
+      padding: 20px;
+      background: white;
+      margin: 20px auto;
+      max-width: 800px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .tab-content.active {
+      display: block;
+    }
+    img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1em;
+    }
+    h2, h3 {
+      text-align: center;
+    }
+  </style>
 </head>
-
 <body>
   <header>
     <h1>Flood Myths: Chaos, Rebirth, and the Unconscious</h1>
-    <nav>
-      <ul>
-        <li><a href="#ancient">Ancient Myths</a></li>
-        <li><a href="#archetype">Archetypes</a></li>
-        <li><a href="#modern">Modern Reflections</a></li>
-        <li><a href="#personal">My Reflection</a></li>
-      </ul>
-    </nav>
   </header>
 
+  <nav>
+    <ul>
+      <li><a href="#flood-myths">Flood Myths</a></li>
+      <li><a href="#archetypes">Archetypes</a></li>
+      <li><a href="#modern">Modern Reflections</a></li>
+      <li><a href="#personal">My Reflection</a></li>
+    </ul>
+  </nav>
+
   <main>
-    <section id="ancient">
+    <section id="flood-myths">
       <h2>Ancient Flood Myths</h2>
-      <div class="myth-card">
-        <h3>Noah’s Ark</h3>
-        <p>After God saw that mankind had become violent and wicked, he decided to cleanse the Earth with a flood. Noah, a righteous man, was instructed to build an ark and preserve pairs of animals. The flood lasted 40 days and nights, after which the world was reborn. <strong>Analysis:</strong> This myth portrays water as both a punishment and a purifying force. Through a psychological lens, the flood represents a reset of the collective unconscious, with Noah as the individuated self.</p>
+
+      <div class="tab-buttons">
+        <button onclick="openTab('noah')" class="active">Noah</button>
+        <button onclick="openTab('yu')">Yu the Great</button>
+        <button onclick="openTab('manu')">Manu</button>
+        <button onclick="openTab('deucalion')">Deucalion & Pyrrha</button>
       </div>
 
-      <div class="myth-card">
+      <div id="noah" class="tab-content active">
+        <img src="assets/images/noah.jpg" alt="Noah's Ark">
+        <h3>Noah's Ark</h3>
+        <p>Summary: God sees the wickedness of mankind and sends a flood to cleanse the earth, saving only Noah and pairs of animals. Noah builds an ark and survives the flood, later offering sacrifices to God who promises not to flood the earth again.</p>
+        <p><strong>Analysis:</strong> A psychological reading shows Noah as the individuated self surviving a collapse of collective morality. The flood symbolizes unconscious chaos resetting the world.</p>
+      </div>
+
+      <div id="yu" class="tab-content">
+        <img src="assets/images/yu.jpg" alt="Yu the Great">
         <h3>Yu the Great</h3>
-        <p>Yu's 13-year struggle against the floods shows humanity conquering chaos not by divine rescue, but by wisdom, labor, and self-sacrifice. He channels the water rather than damming it. <strong>Anthropological Insight:</strong> This reflects early Chinese society’s emphasis on order, harmony, and the mandate of heaven. Yu earns power through merit, not birthright.</p>
+        <p>Summary: Yu battles floods not with divine help, but with wisdom and persistence. He channels water back to the ocean, defeats river monsters, and earns his role as emperor.</p>
+        <p><strong>Analysis:</strong> Yu represents a heroic individual restoring harmony to a disordered world—individuation through rationality and service. Anthropologically, it shows early China's focus on state-building and moral leadership.</p>
+      </div>
+
+      <div id="manu" class="tab-content">
+        <img src="assets/images/manu.jpg" alt="Manu and the Fish">
+        <h3>Manu</h3>
+        <p>Summary: A small fish warns Manu of an upcoming flood. He saves the fish, who grows enormous and pulls his boat to safety. After the flood, Manu performs sacrifices, and from these, new life is created.</p>
+        <p><strong>Analysis:</strong> Manu's story blends rebirth through ritual and ethical duty. Psychologically, the fish represents the unconscious guiding Manu to transformation. Culturally, it reflects Vedic ideals of sacrifice and cosmic renewal.</p>
+      </div>
+
+      <div id="deucalion" class="tab-content">
+        <img src="assets/images/deucalion.jpg" alt="Deucalion and Pyrrha">
+        <h3>Deucalion & Pyrrha</h3>
+        <p>Summary: Zeus sends a flood to destroy wicked humanity. Deucalion and Pyrrha survive in a boat and later repopulate the world by throwing stones behind them, which transform into people.</p>
+        <p><strong>Analysis:</strong> This myth represents destruction and rebirth through symbolic interpretation and obedience to divine guidance. The rocks = seeds of new consciousness.</p>
       </div>
     </section>
 
-    <section id="archetype">
+    <section id="archetypes">
       <h2>Archetypes & Interpretation</h2>
-      <p>According to Joseph Campbell, flood myths mirror the “Belly of the Whale” stage in the Hero’s Journey, where the hero enters the chaos of the unconscious to be reborn.</p>
+      <p>Flood myths often follow Joseph Campbell's Hero’s Journey: separation, transformation, and return. They reflect deep unconscious structures—cleansing, descent into chaos, and rebirth as a new self or society.</p>
     </section>
 
     <section id="modern">
       <h2>Modern Reflections</h2>
-      <p>Today, rising sea levels, climate anxiety, and technological overreach echo the themes of ancient flood myths. Are we, like the ancients, ignoring the signs of the unconscious?</p>
+      <p>Climate change, pandemics, and social upheaval are today’s flood myths. They echo ancient warnings: when we ignore balance and lose touch with the unconscious, we face overwhelming collapse—yet within that, a chance for renewal.</p>
     </section>
 
     <section id="personal">
       <h2>My Reflection</h2>
-      <p>I’ve experienced my own flood moments—times when I felt overwhelmed by school, expectations, or identity. These myths helped me see that going under doesn’t mean it’s over. It means something new can grow.</p>
+      <p>These myths helped me understand that collapse isn’t the end—it's transformation. When I’ve faced emotional overwhelm, school pressure, or identity struggles, I see the symbolic power of flood myths: we fall apart to come back wiser.</p>
     </section>
   </main>
 
   <footer>
     <p>© 2025 Flood Myths Project by [Your Name]</p>
   </footer>
-  <script src="script.js"></script>
+
+  <script>
+    function openTab(id) {
+      const contents = document.querySelectorAll('.tab-content');
+      const buttons = document.querySelectorAll('.tab-buttons button');
+      contents.forEach(content => content.classList.remove('active'));
+      buttons.forEach(btn => btn.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
 </body>
 </html>
+
