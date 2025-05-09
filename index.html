@@ -1,10 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flood Myths Interactive</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <p>Welcome to my GitHub Pages website.</p>
+  <header>
+    <h1>Flood Myths: Chaos, Rebirth, and the Unconscious</h1>
+    <nav>
+      <ul>
+        <li><a href="#ancient">Ancient Myths</a></li>
+        <li><a href="#archetype">Archetypes</a></li>
+        <li><a href="#modern">Modern Reflections</a></li>
+        <li><a href="#personal">My Reflection</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="intro">
+      <h2>Welcome</h2>
+      <p>Explore the timeless and recurring structure of flood myths across global cultures. What do they reveal about us, and could we be living in one today?</p>
+      <button onclick="scrollToSection('ancient')">Start Exploring</button>
+    </section>
+
+    <section id="ancient">
+      <h2>Ancient Flood Myths</h2>
+      <div class="myth-card">
+        <h3>Yu the Great (China)</h3>
+        <p>Yu tames the flood through endurance and divine aid...</p>
+        <button onclick="scrollToSection('archetype')">Next</button>
+      </div>
+    </section>
+
+    <section id="archetype">
+      <h2>Patterns and Archetypes</h2>
+      <p>Here we explore shared features among flood myths: righteous survivors, divine wrath, and sacred renewal...</p>
+      <button onclick="scrollToSection('modern')">Next</button>
+    </section>
+
+    <section id="modern">
+      <h2>Modern Connections</h2>
+      <p>Climate change, natural disasters, and moral reckoning: how today's world mirrors ancient warnings.</p>
+      <button onclick="scrollToSection('personal')">Next</button>
+    </section>
+
+    <section id="personal">
+      <h2>My Reflection</h2>
+      <p>Have I experienced my own symbolic flood? What does individuation mean in today’s chaotic world?</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Flood Myths Project by [Your Name]</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
